@@ -1,0 +1,22 @@
+@font-face {
+    font-family: 'Montserrat Alternates';
+    font-style: normal;
+    font-weight: 400;
+    src: url(Montserrat+Alternates_400_normal.eot); /* {{embedded-opentype-gf-url}} */
+    src: local('☺'),
+        url(Montserrat+Alternates_400_normal.eot?#iefix) format('embedded-opentype'), /* {{embedded-opentype-gf-url}} */
+        url(Montserrat+Alternates_400_normal.woff) format('woff'), /* http://fonts.gstatic.com/s/montserratalternates/v4/z2n1Sjxk9souK3HCtdHukiVz4wwEV01Tv2kxNh88JXM.woff */
+        url(Montserrat+Alternates_400_normal.ttf) format('truetype'), /* http://fonts.gstatic.com/s/montserratalternates/v4/z2n1Sjxk9souK3HCtdHuktwpL7Jo2YeDjXcCdWxOlSKglnMp3_3A8V8Ai8YosRtX.ttf */
+        url(Montserrat+Alternates_400_normal.svg#Montserrat+Alternates_400_normal) format('svg'); /* http://fonts.gstatic.com/l/font?kit=z2n1Sjxk9souK3HCtdHukklc3LJmiMnKjSUrTTcmPEM&skey=1c28268e06f190cd&v=v4#MontserratAlternates */
+}
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: url(Roboto_400_normal.eot); /* {{embedded-opentype-gf-url}} */
+    src: local('☺'),
+        url(Roboto_400_normal.eot?#iefix) format('embedded-opentype'), /* {{embedded-opentype-gf-url}} */
+        url(Roboto_400_normal.woff) format('woff'), /* http://fonts.gstatic.com/s/roboto/v15/2UX7WLTfW3W8TclTUvlFyQ.woff */
+        url(Roboto_400_normal.ttf) format('truetype'), /* http://fonts.gstatic.com/s/roboto/v15/QHD8zigcbDB8aPfIoaupKOvvDin1pK8aKteLpeZ5c0A.ttf */
+        url(Roboto_400_normal.svg#Roboto_400_normal) format('svg'); /* http://fonts.gstatic.com/l/font?kit=_YZOZaQ9UBZzaxiLBLcgZg&skey=a0a0114a1dcab3ac&v=v15#Roboto */
+}

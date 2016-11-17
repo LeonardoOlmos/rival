@@ -1,0 +1,13 @@
+    <div class="container">
+        <h1 *ngIf="rondaActual ==0 "> Nuevo Juego </h1>
+        <h1 *ngIf="rondaActual !=0 ">Ronda {{rondaActual}} </h1>
+        <div class="row">
+        <b-cronometro *ngIf="nuevaRonda" (accion)="controlador($event)" (cero)="intermedio($event)" [minutos]="minutos" [segundos]="segundos" [nuevaRonda]="nuevaRonda" ></b-cronometro>
+        </div>
+        <div class="row" *ngIf="!juegoEnProceso">
+            <div class="col-md-4 offset-md-5">
+                <button class="btn btn-lg next" (click)="siguienteRonda()" *ngIf="rondaActual==0"> Empezar Juego</button>
+                <button class="btn-lg next" (click)="siguienteRonda()" *ngIf="rondaActual!=0 && !nuevaRonda"> Siguiente Ronda</button>
+            </div>
+        </div>
+    </div>

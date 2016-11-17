@@ -1,57 +1,84 @@
 {
-    "Preguntas":[
+    "Ronda 1":[
+        {"pregunta" : "¿Quién es el primer ministro de Perú?", "respuesta" : "Fernando Zavala."},
         {"pregunta" : "Menciona los derechos de los deudores tributarios", "respuesta": "Interponer cualquier medio impugnatorio establecido en el Código Tributario."},
         {"pregunta" : "¿Cuándo se puede interponer reclamación?", "respuesta" : "Cuando los deudores tributarios están directamente afectados."},
         {"pregunta" : "¿Contra qué procede la Revocación?", "respuesta" : "Resolución de Determinación, orden de Pago y la resolución de Multa."},
-        {"pregunta" : "¿Cómo se debe de interponer la Reclamación?", "respuesta" : "Mediante escrito fundamentado"},
-        {"pregunta" : "¿Qué importancia tiene el abogado en el escrito inicial de reclamación?", "respuesta" : "Tiene gran importancia porque debe contener el nombre del abogado que lo autoriza, así como su firma y su registro. "},
-        {"pregunta" : "¿Cuánto tiempo se tiene para presentar la reclamación en términos generales y a partir de cuándo?", "respuesta" : "Se presentan en el término de 20 días hábiles a partir de que se notificó el acto o resolución ocurrida. "},
+        {"pregunta" : "¿Cómo se debe de interponer la Reclamación?", "respuesta" : "Mediante escrito fundamentado."},
+        {"pregunta" : "¿Cuál es el salario mínimo de Perú?", "respuesta" : "750 Nuevos Soles."},
+        {"pregunta" : "¿Qué importancia tiene el abogado en el escrito inicial de reclamación?", "respuesta" : "Tiene gran importancia porque debe contener el nombre del abogado que lo autoriza, así como su firma y su registro."},
+        {"pregunta" : "¿Cuánto tiempo se tiene para presentar la reclamación en términos generales y a partir de cuándo?", "respuesta" : "Se presentan en el término de 20 días hábiles a partir de que se notificó el acto o resolución ocurrida."},
         {"pregunta" : "De no interponerse las reclamaciones contra las resoluciones y contra los actos vinculados con la determinación de la deuda dentro del plazo de 20 días ¿Qué sucede? ", "respuesta" : "Dichas resoluciones y actos quedarán firmes."},
-        {"pregunta" : "¿Qué autoridad resuelve la reclamación en primera instancia?", "respuesta" : "SUNAT respecto de los tributos que administre. 2. Los Gobiernos locales 3. Otros que la ley señale "},
+        {"pregunta" : "¿Qué autoridad resuelve la reclamación en primera instancia?", "respuesta" : "SUNAT respecto de los tributos que administre. 2. Los Gobiernos locales 3. Otros que la ley señale."},
+        {"pregunta" : "Nombre del año 2016 en Perú", "respuesta" : "Año de la consolidación del Mar de Grau."},
         {"pregunta" : "Medios probatorios que pueden actuarse.", "respuesta" : "Documentos, pericia, y la inspección del órgano encargado de resolver."},
-        {"pregunta" : "Plazo para ofrecer las pruebas ", "respuesta" : "30 días hábiles, contados a partir de la fecha en que se interpone el recurso de reclamación o apelación"},
+        {"pregunta" : "Plazo para ofrecer las pruebas ", "respuesta" : "30 días hábiles, contados a partir de la fecha en que se interpone el recurso de reclamación o apelación."},
         {"pregunta" : "¿Qué va a expresar la resolución de la Reclamación?", "respuesta" : "Los fundamentos de hecho y de derecho que sirvan de base para la resolución."},
-        {"pregunta" : "¿Cuándo causan efecto las notificaciones?", "respuesta" : "Desde el día hábil siguiente al de su recepción o de la última publicación"},
+        {"pregunta" : "¿Cuándo causan efecto las notificaciones?", "respuesta" : "Desde el día hábil siguiente al de su recepción o de la última publicación."},
         {"pregunta" : "¿Hasta qué momento se pueden modificar o revocar los actos de la Administración Tributaria?", "respuesta" : "Hasta antes de la notificación."},
-        {"pregunta" : "¿Qué actos puede hacer la Administración Tributaria después de la notificación?", "respuesta" : "Podrá revocar, modificar, sustituir o complementar sus actos, pero sólo en casos específicos."},
+        {"pregunta" : "¿Qué significa GLP?", "respuesta" : "Gas Licuado de Petróleo, utilizada en todas las cocinas de Perú."},
+        {"pregunta" : "¿Qué actos puede hacer la Administración Tributaria después de la notificación?", "respuesta" : "Podrá revocar, modificar, sustituir o complementar sus actos, pero sólo en casos específicos."}
+       ],
+        "Ronda 2" : [
         {"pregunta" : "¿En qué tiempo, la Administración Tributaria, resolverá las Reclamaciones?", "respuesta" : "Resolverá las reclamaciones dentro de un plazo máximo de 9 meses."},
+        {"pregunta" : "Peruano precursor de los viajes espaciales.", "respuesta" : "Pedro Paulet, inventó un motor-cohete de combustible líquido (motor que después usarían las naves espaciales)."},
         {"pregunta" : "La Administración Tributaria podrá resolver las reclamaciones que sean declaradas fundadas o de cuestiones de puro derecho antes del vencimiento del plazo probatorio. Cierto o falso", "respuesta" : "Cierto."}, 
-        {"pregunta" : "¿Qué pasa con el cómputo de plazos cuando se requiere al interesado a dar cumplimiento a algún trámite?", "respuesta" : "El cómputo se suspende desde el día hábil siguiente a la fecha de notificación del requerimiento hasta el de su cumplimiento"},
-        {"pregunta" : "", "respuesta" : ""},
-        {"pregunta" : "", "respuesta" : ""},
-        {"pregunta" : "", "respuesta" : ""},
-        {"pregunta" : "", "respuesta" : ""},
-        {"pregunta" : "", "respuesta" : ""},
-        {"pregunta" : "", "respuesta" : ""},
-        {"pregunta" : "", "respuesta" : ""},
-        {"pregunta" : "", "respuesta" : ""},
-        {"pregunta" : "", "respuesta" : ""},
-        {"pregunta" : "", "respuesta" : ""},
-        {"pregunta" : "", "respuesta" : ""},
-        {"pregunta" : "", "respuesta" : ""},
-        {"pregunta" : "", "respuesta" : ""},
-        {"pregunta" : "", "respuesta" : ""},
-        {"pregunta" : "", "respuesta" : ""},
-        {"pregunta" : "", "respuesta" : ""},
-        {"pregunta" : "", "respuesta" : ""},
-        {"pregunta" : "", "respuesta" : ""},
-        {"pregunta" : "", "respuesta" : ""},
-        {"pregunta" : "", "respuesta" : ""},
-        {"pregunta" : "", "respuesta" : ""},
-        {"pregunta" : "", "respuesta" : ""},
-        {"pregunta" : "", "respuesta" : ""},
-        {"pregunta" : "", "respuesta" : ""},
-        {"pregunta" : "", "respuesta" : ""},
-        {"pregunta" : "", "respuesta" : ""},
-        {"pregunta" : "", "respuesta" : ""},
-        {"pregunta" : "", "respuesta" : ""},
-        {"pregunta" : "", "respuesta" : ""},
-        {"pregunta" : "", "respuesta" : ""},
-        {"pregunta" : "", "respuesta" : ""},
-        {"pregunta" : "", "respuesta" : ""},
-        {"pregunta" : "", "respuesta" : ""},
-        {"pregunta" : "", "respuesta" : ""},
-        {"pregunta" : "", "respuesta" : ""}
-]
+        {"pregunta" : "¿Qué pasa con el cómputo de plazos cuando se requiere al interesado a dar cumplimiento a algún trámite?", "respuesta" : "El cómputo se suspende desde el día hábil siguiente a la fecha de notificación del requerimiento hasta el de su cumplimiento."},
+        {"pregunta" : "¿Quiénes compusieron el himno nacional de Perú?", "respuesta" : "Música: José Bernardo Alcedo, Letra: José de la Torre Ugarte."},
+        {"pregunta" : "¿Ante que procede el recurso de apelación?", "respuesta" : "Contra reclamaciones sobre materia tributaria, general y local."},
+        {"pregunta" : "Poeta peruano más famoso.", "respuesta" : "José Santos Chocano."},
+        {"pregunta" : "En el recurso de apelación, ¿quién es el órgano competente?", "respuesta" : "Tribunal Fiscal."},
+        {"pregunta" : "Significado de las siglas ESSALUD", "respuesta" : "Seguro Social de Salud del Perú."},
+        {"pregunta" : "¿Quién fue el primer presidente de Perú?", "respuesta" : "José de la Riva Agüero Sánchez Boquete."},
+        {"pregunta" : "¿Ante quien se presenta el recurso de apelación?", "respuesta" : "Ante el órgano que dictó la resolución apelada."},
+        {"pregunta" : "Presidente de Perú apodado el soldado de la ley.", "respuesta" : "Don Ramón Castilla."},
+        {"pregunta" : "¿Cuántos días da la autoridad para subsanar las omisiones de la apelación?", "respuesta" : "15 días."},
+        {"pregunta" : "¿Cuál es el número de habitantes en Perú?", "respuesta" : "31,320,000"},
+        {"pregunta" : "Aviador Peruano considerado héroe de la primera guerra mundial.", "respuesta" : "Juan Bielovucic, luchó con Francia."},
+        {"pregunta" : "Departamento más poblado?", "respuesta" : "Lima."}
+    ],
+        "Ronda 3": [
+        {"pregunta" : "¿Quién notificará para que se subsanen las omisiones que pudieran existir para el trámite de la apelación?", "respuesta" : "La Administración Tributaria."},
+        {"pregunta" : "¿Ciudad más Alta del Mundo?", "respuesta" : "Arrinconada."},
+        {"pregunta" : "Territorio de Perú.", "respuesta" : "1285,215.6 km"},
+        {"pregunta" : "¿Perú es el país más grande de Sudamérica?", "respuesta" : "No, ocupa el tercer lugar."},
+        {"pregunta" : "Animal más autóctono de Perú", "respuesta" : "Llama y anaconda."},
+        {"pregunta" : "¿Cuantos Emperadores Incas tuvo Perú?", "respuesta" : "15."},
+        {"pregunta" : "¿Cuantos departamentos posee Perú?", "respuesta" : "24 y el departamento o provincia constitucional."},
+        {"pregunta" : "Plantas más destacadas del Perú.", "respuesta" : "Papa, uña de gato y yakon."},
+        {"pregunta" : "¿Qué no se admitirá como medio probatorio ante el Tribunal Fiscal?", "respuesta" : "La documentación que habiendo sido requerida en primera instancia no hubiera sido presentada y/o exhibida por el deudor tributario."},
+        {"pregunta" : "Año de la Independencia del Perú", "respuesta" : "1821."},
+        {"pregunta" : "¿Se debe de pagar la deuda para poder interponer el recurso de apelación?", "respuesta" : "No es requisito el pago previo de la deuda tributaria, pero para que ésta sea aceptada, el apelante deberá acreditar que ha abonado la parte no apelada actualizada hasta la fecha en que se realice el pago."},
+        {"pregunta" : "Cargo que ocupo Simón Bolívar en Perú", "respuesta" : "Presidente."}  
+        ],      
+
+        "Ronda 4": [
+        {"pregunta" : "¿Qué podrá agraviarse en el recurso de apelación?", "respuesta" : "Podrá discutir en la apelación aspectos que no se impugnaron en la reclamación."},
+        {"pregunta" : "¿Cuáles son los Poderes en Perú?", "respuesta" : "Ejecutivo Legislativo y Judicial."},
+        {"pregunta" : "Con quien delimito Perú su territorio a partir de un fallo de la Corte Internacional de Justicia.", "respuesta" : "Chile."},
+        {"pregunta" : "Civilización peruana considerada la más antigua de América", "respuesta" : "La civilización de Caral."},
+        {"pregunta" : "Ciudad capital del imperio Inca", "respuesta" : "Cuzco."},
+        {"pregunta" : "¿Qué facultades puede realizar la autoridad en el recurso de apelación?", "respuesta" : "Contestar la apelación, presentar medios probatorios y demás actuaciones que correspondan."},
+        {"pregunta" : "¿Cuál es el plazo normal para resolver la apelación?", "respuesta" : "12 meses."},
+        {"pregunta" : "¿Qué termino se tiene para apelar de puro derecho?", "respuesta" : "20 días hábiles."},
+        {"pregunta" : "¿Cuántos lugares declarado Patrimonio Cultural de la Humanidad tiene el Perú?", "respuesta" : "9."},
+        {"pregunta" : "¿Es necesario la interposición de la reclamación para la apelación de puro derecho?", "respuesta" : "No."}
+      ],
+
+      "Ronda 5": [
+        {"pregunta" : "¿Cuál es procedimiento para que el Tribunal conozca de esta apelación?", "respuesta" : "El Tribunal, previamente deberá calificar la impugnación como de puro derecho."},
+        {"pregunta" : "¿Procede recurso alguno contra la resolución del Tribunal Fiscal?", "respuesta" : "Contra lo resuelto por el Tribunal Fiscal no cabe recurso alguno en la vía administrativa."},
+        {"pregunta" : "¿Contra que procede la queja?", "respuesta" : "Contra actuaciones o procedimientos que afecten directamente o infrinjan lo establecido en este Código Tributario del Perú, la Ley General de Aduanas, así como su Reglamento y disposiciones administrativas en materia aduanera."},
+        {"pregunta" : "¿Cuál es termino para la interposición de la queja?", "respuesta" : "20 días."},
+        {"pregunta" : "¿Quién es competente para resolver de la queja?", "respuesta" : "Tribunal Fiscal y el Ministro de economía y Finanzas contra actos del Tribunal Fiscal."},
+        {"pregunta" : "¿La queja es un recurso administrativo?", "respuesta" : "No, es un medio procesal."}
+      ]
 }
 
+
+
+
+
+
+
+    
