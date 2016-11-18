@@ -13,7 +13,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-9">
-                    <b-cronometro *ngIf="nuevaRonda" (accion)="controlador($event)" (cero)="intermedio($event)" [minutos]="minutos" [segundos]="segundos" [nuevaRonda]="nuevaRonda" [rondaActual]="rondaActual" ></b-cronometro>
+                    <b-cronometro *ngIf="nuevaRonda && !fin" (accion)="controlador($event)" (cero)="intermedio($event)" [minutos]="minutos" [segundos]="segundos" [nuevaRonda]="nuevaRonda" [rondaActual]="rondaActual" ></b-cronometro>
                     <div class="row" *ngIf="!juegoEnProceso">
                         <div class="inicio" *ngIf="rondaActual==0">
                            <div class="participante">
@@ -26,8 +26,8 @@
                             </ul>
 
                         </div>
-                        <div class="col-md-6 offset-md-5">
-                            <div class="" *ngIf="rondaActual!=0 && !nuevaRonda">
+                        <div class="col-md-8 offset-md-4">
+                            <div class="resultados" *ngIf="rondaActual!=0 && !nuevaRonda">
                             <h2>Resultados</h2>
                              <li class="lista-participantes" *ngFor="let p of participantes; let i=index; ">
                                 <h3>{{p.participante}} : {{p.puntuacion_ronda}}
@@ -42,30 +42,36 @@
                     </div>
 
                     <div class="row enProceso" *ngIf="nuevaRonda">
-                        <div class="col-md-8">
-                            <div class="pregunta-respuesta">
+                        <div class="col-md-10">
+                            <div class="pregunta-respuesta" *ngIf="!fin">
                                 <div class="row">
-                                    <h4>Participante: <small>{{participantes[participanteActual].participante}}</small></h4>
+                                    <h4 >Participante: <small>{{participantes[participanteActual].participante}}</small></h4>
                                 </div>
                                 <div class="row">
-                                    <h3> {{preguntas[preguntaActual]?.pregunta}}</h3>
-                                    <h4> R: <small>{{preguntas[preguntaActual]?.respuesta}}</small></h4>
+                                    <h3 class="text-justify"> {{preguntas[preguntaActual]?.pregunta}}</h3>
+                                    <h4 class="text-justify"> R: <small>{{preguntas[preguntaActual]?.respuesta}}</small></h4>
                                 </div>
                             </div>
-                            <div class="row" *ngIf="juegoEnProceso || rondaActual==5">
+                            <div class="fin" *ngIf="fin">
+                                <h1> El fiscal más débil</h1>
+                                <h2>Felicidades {{ganador.participante}} ganaste!</h2>
+                                <h3>Premio: $ <small>{{acumuladoTotal}}</small></h3>
+                            </div>
+                            <div class="row" *ngIf="(juegoEnProceso || rondaActual==5)&& !fin">
                                 <button class="btn btn-success btn-lg controles" (click)="banco()">Banco</button>
                                 <button class="btn btn-info btn-lg controles" (click)="correcto()">Correcto</button>
                                 <button class="btn btn-danger btn-lg controles" (click)="incorrecto()">Incorrecto</button>
                             </div>
 
-                            <div class="row">
-                                <h3>BANCO: {{acumuladoRonda}} </h3>
-                        </div>
+
                     </div>
                 </div>
                             </div>
-                <div class="col-md-3" *ngIf="nuevaRonda">
+                <div class="col-md-3" *ngIf="nuevaRonda && !fin">
                     <b-medidor [ganado]="ganado"></b-medidor>
+                        <div *ngIf="!fin">
+                                <h3>BANCO: {{acumuladoRonda}} </h3>
+                        </div>
 
                 </div>
 

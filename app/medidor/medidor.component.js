@@ -12,7 +12,7 @@ var core_1 = require('@angular/core');
 var MedidorComponent = (function () {
     function MedidorComponent() {
         this.ganado = 10;
-        this.cantidades = [0, 500, 1000, 1500, 2000, 2500, 3000, 3500, 4000, 5000].reverse();
+        this.cantidades = [0, 100, 200, 500, 700, 1000, 1500, 2000, 2500, 5000].reverse();
     }
     MedidorComponent.prototype.ngOnInit = function () { };
     __decorate([
@@ -23,8 +23,8 @@ var MedidorComponent = (function () {
         core_1.Component({
             moduleId: module.id,
             selector: 'b-medidor',
-            template: "\n    \n    <div *ngFor=\"let cantidad of cantidades; let i = index\">\n        <div class=\"btn-info btn-sm medidores\" [class.ganado]=\"i > ganado\" [class.a-ganar]=\"ganado==i\" >S/ {{cantidad}}</div>\n    </div>  \n    ",
-            styles: ["\n    .ganado {\n      color : red;\n    }\n    .a-ganar {\n        color : green;\n    }\n    .medidores{\n        margin-bottom: 1px;width: 80px; height: 30px; \n    }\n    "]
+            template: "\n    \n    <div *ngFor=\"let cantidad of cantidades; let i = index\">\n        <div class=\"col-md-12\">\n        <div class=\"btn btn-outline-secondary  medidores\" [class.ganado]=\"i > ganado\" [class.a-ganar]=\"ganado==i\" >S/ {{cantidad}}</div>\n        </div>\n    </div>  \n    ",
+            styles: ["\n    .ganado {\n      color : white;\n      background-color:#2e7d32 ;\n    }\n    .a-ganar {\n        color : white;\n        background-color: #b71c1c;\n    }\n    .medidores {\n        margin-bottom: 5px;\n        width: 100px;\n    }\n\n    "]
         }), 
         __metadata('design:paramtypes', [])
     ], MedidorComponent);

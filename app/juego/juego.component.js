@@ -28,7 +28,8 @@ var JuegoComponent = (function () {
         this.ganado = 10;
         this.acumuladoRonda = 0;
         this.acumuladoTotal = 0;
-        this.cantidades = [0, 500, 1000, 1500, 2000, 2500, 3000, 3500, 4000, 5000].reverse();
+        this.cantidades = [0, 100, 200, 500, 700, 1000, 1500, 2000, 2500, 5000].reverse();
+        this.fin = false;
         this.getParticipantes();
     }
     JuegoComponent.prototype.ngOnInit = function () {
@@ -141,6 +142,12 @@ var JuegoComponent = (function () {
         }
     };
     JuegoComponent.prototype.incorrecto = function () {
+        if (this.rondaActual == 5) {
+            this.fin = true;
+            this.acumuladoTotal += this.acumuladoRonda;
+            this.ganador = this.participantes[this.participanteActual - 1];
+            return;
+        }
         this.ganado = 8;
         this.preguntaActual += 1;
         if (this.participanteActual == this.participantes.length - 1) {
@@ -168,7 +175,7 @@ var JuegoComponent = (function () {
             moduleId: module.id,
             selector: 'b-juego',
             templateUrl: './juego.component.html',
-            styles: ["\n        .next {\n            background-color: #f44336;\n            color : white;\n        }\n        .lista-participantes {\n            list-style : none;\n             }\n        .controles {\n            margin-right: 5px;\n        }\n        .pregunta-respuesta {\n            height: 230px;\n        }\n        .lime {\n            background-color: #b71c1c;\n            margin-bottom : 30px;\n            color: white;\n        }\n        .participante{\n            color: #3d5afe;\n        }\n        "]
+            styles: ["\n        .next {\n            background-color: #f44336;\n            color : white;\n        }\n        .lista-participantes {\n            list-style : none;\n             }\n        .controles {\n            margin-right: 5px;\n        }\n        .pregunta-respuesta {\n            height: 230px;\n        }\n        .lime {\n            background-color: #b71c1c;\n            margin-bottom : 30px;\n            color: white;\n        }\n        .participante{\n            color: #3d5afe;\n        }\n        .fin > h1 {\n            font-size : 6rem;\n            color : #2962ff;\n        }\n        .fin > h2 {\n            font-family: 'Roboto';\n            font-size: 4rem; \n        }\n        "]
         }), 
         __metadata('design:paramtypes', [preguntas_service_1.PreguntasService, participante_service_1.ParticipanteService])
     ], JuegoComponent);

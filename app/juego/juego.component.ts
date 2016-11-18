@@ -29,6 +29,14 @@ import { PreguntasService } from '../services/preguntas.service';
         .participante{
             color: #3d5afe;
         }
+        .fin > h1 {
+            font-size : 6rem;
+            color : #2962ff;
+        }
+        .fin > h2 {
+            font-family: 'Roboto';
+            font-size: 4rem; 
+        }
         `]
 })
 
@@ -49,7 +57,9 @@ export class JuegoComponent implements OnInit, OnChanges {
     acumulado : number;
     acumuladoRonda : number = 0;
     acumuladoTotal : number = 0;
-    cantidades = [0,500,1000,1500,2000,2500,3000,3500,4000,5000].reverse();
+    cantidades = [0,100,200,500,700,1000,1500,2000,2500,5000].reverse();
+    fin: boolean = false;
+    ganador;
 
 
     constructor( private preguntas_s : PreguntasService, private participante_S: ParticipanteService) {
@@ -186,13 +196,20 @@ export class JuegoComponent implements OnInit, OnChanges {
     }
 
     incorrecto() {
+                if ( this.rondaActual == 5) {
+            this.fin = true;
+            this.acumuladoTotal += this.acumuladoRonda;
+            this.ganador = this.participantes[this.participanteActual-1];
+            return;
+        }        
         this.ganado = 8;
         this.preguntaActual += 1;
         if (this.participanteActual == this.participantes.length -1 ) {
             this.participanteActual = 0;
         } else {
             this.participanteActual += 1;
-        }        
+        }
+
     }
 
     banco() {
