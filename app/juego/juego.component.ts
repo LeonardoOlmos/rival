@@ -180,6 +180,9 @@ export class JuegoComponent implements OnInit, OnChanges {
     }
 
     correcto() {
+        if (this.rondaActual == 5) {
+            this.ganador = this.participantes[this.participanteActual];
+        }
         this.participantes[this.participanteActual].puntuacion_ronda +=1;
         this.preguntaActual += 1;
         this.ganado -= 1;  
@@ -193,15 +196,14 @@ export class JuegoComponent implements OnInit, OnChanges {
             this.minutos=0;
             this.segundos=0;
         }
+
     }
 
     incorrecto() {
-                if ( this.rondaActual == 5) {
+    if ( this.rondaActual == 5) {
             this.fin = true;
             this.acumuladoTotal += this.acumuladoRonda;
-            this.ganador = this.participantes[this.participanteActual-1];
-            return;
-        }        
+            return;}        
         this.ganado = 8;
         this.preguntaActual += 1;
         if (this.participanteActual == this.participantes.length -1 ) {

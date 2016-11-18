@@ -126,6 +126,9 @@ var JuegoComponent = (function () {
         this.preguntaActual = 0;
     };
     JuegoComponent.prototype.correcto = function () {
+        if (this.rondaActual == 5) {
+            this.ganador = this.participantes[this.participanteActual];
+        }
         this.participantes[this.participanteActual].puntuacion_ronda += 1;
         this.preguntaActual += 1;
         this.ganado -= 1;
@@ -145,7 +148,6 @@ var JuegoComponent = (function () {
         if (this.rondaActual == 5) {
             this.fin = true;
             this.acumuladoTotal += this.acumuladoRonda;
-            this.ganador = this.participantes[this.participanteActual - 1];
             return;
         }
         this.ganado = 8;
