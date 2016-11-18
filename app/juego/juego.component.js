@@ -9,17 +9,47 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var participante_service_1 = require('../services/participante.service');
+var preguntas_service_1 = require('../services/preguntas.service');
 var JuegoComponent = (function () {
-    function JuegoComponent() {
+    function JuegoComponent(preguntas_s, participante_S) {
+        this.preguntas_s = preguntas_s;
+        this.participante_S = participante_S;
         this.minutos = 0;
-        this.segundos = 20;
+        this.segundos = 0;
         this.mostrarIntermedio = true;
         this.juegoEnProceso = false;
         this.numRondas = 5;
         this.rondaActual = 0;
         this.nuevaRonda = false;
+        this.participanteActual = 0;
+        this.preguntas = [];
+        this.preguntaActual = 0;
+        this.ganado = 10;
+        this.acumuladoRonda = 0;
+        this.acumuladoTotal = 0;
+        this.cantidades = [0, 500, 1000, 1500, 2000, 2500, 3000, 3500, 4000, 5000].reverse();
+        this.getParticipantes();
     }
-    JuegoComponent.prototype.ngOnInit = function () { };
+    JuegoComponent.prototype.ngOnInit = function () {
+    };
+    JuegoComponent.prototype.ngOnChanges = function () {
+    };
+    JuegoComponent.prototype.getParticipantes = function () {
+        var _this = this;
+        this.participante_S.getParticipantes()
+            .subscribe(function (d) {
+            _this.participantes = d.Participantes;
+        });
+    };
+    JuegoComponent.prototype.getPreguntas = function () {
+        var _this = this;
+        this.preguntas_s.getPreguntas(this.rondaActual)
+            .subscribe(function (d) {
+            _this.preguntas = d;
+            console.log(_this.preguntas);
+        });
+    };
     JuegoComponent.prototype.controlador = function (accion) {
         switch (accion) {
             case 'inicio':
@@ -36,45 +66,111 @@ var JuegoComponent = (function () {
     };
     JuegoComponent.prototype.intermedio = function (cero) {
         var _this = this;
+        this.acumuladoTotal += this.acumuladoRonda;
+        this.juegoEnProceso = false;
         setTimeout(function () {
-            _this.juegoEnProceso = false;
             _this.nuevaRonda = false;
         }, 2000);
     };
     JuegoComponent.prototype.rondas = function () {
+        console.log(this.rondaActual);
         switch (this.rondaActual) {
             case 2:
-                this.segundos = 15;
+                this.minutos = 1;
+                this.segundos = 40;
                 break;
             case 3:
-                this.segundos = 10;
+                this.minutos = 1;
+                this.segundos = 20;
                 break;
             case 4:
-                this.segundos = 5;
-                this.minutos -= 0;
+                this.minutos = 0;
+                this.segundos = 59;
                 break;
             case 5:
                 this.segundos = 0;
                 this.minutos = 0;
                 break;
             default:
-                this.minutos = 0;
-                this.segundos = 20;
+                this.minutos = 1;
+                this.segundos = 59;
+                break;
         }
     };
     JuegoComponent.prototype.siguienteRonda = function () {
         this.nuevaRonda = true;
         this.rondaActual += 1;
-        this.rondas();
+        this.getPreguntas();
+        this.reiniciaRonda();
+    };
+    JuegoComponent.prototype.reiniciaRonda = function () {
+        var _this = this;
+        this.participanteActual = 0;
+        this.preguntaActual = 0;
+        this.ganado = 9;
+        this.acumuladoRonda = 0;
+        this.participantes.forEach(function (p) {
+            p.puntuacion_total += p.puntuacion_ronda;
+            p.puntuacion_ronda = 0;
+        });
+        this.minutos = 0;
+        this.segundos = 21;
+        setTimeout(function () {
+            _this.rondas();
+        }, 10);
+    };
+    JuegoComponent.prototype.reiniciaJuego = function () {
+        this.rondaActual = 0;
+        this.participanteActual = 0;
+        this.preguntaActual = 0;
+    };
+    JuegoComponent.prototype.correcto = function () {
+        this.participantes[this.participanteActual].puntuacion_ronda += 1;
+        this.preguntaActual += 1;
+        this.ganado -= 1;
+        if (this.participanteActual == this.participantes.length - 1) {
+            this.participanteActual = 0;
+        }
+        else {
+            this.participanteActual += 1;
+        }
+        if (this.ganado == -1) {
+            this.acumuladoRonda = 5000;
+            this.minutos = 0;
+            this.segundos = 0;
+        }
+    };
+    JuegoComponent.prototype.incorrecto = function () {
+        this.ganado = 8;
+        this.preguntaActual += 1;
+        if (this.participanteActual == this.participantes.length - 1) {
+            this.participanteActual = 0;
+        }
+        else {
+            this.participanteActual += 1;
+        }
+    };
+    JuegoComponent.prototype.banco = function () {
+        if (this.ganado < this.cantidades.length && this.ganado >= 0)
+            this.acumuladoRonda += this.cantidades[this.ganado + 1];
+        if (this.acumuladoRonda >= 5000) {
+            this.minutos = 0;
+            this.segundos = 0;
+            this.acumuladoRonda = 5000;
+        }
+        this.ganado = 9;
+    };
+    JuegoComponent.prototype.adios = function (i) {
+        this.participantes.splice(i, 1);
     };
     JuegoComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
             selector: 'b-juego',
             templateUrl: './juego.component.html',
-            styles: ["\n        .next {\n            background-color: #f57c00;\n            color : white;\n        }\n    "]
+            styles: ["\n        .next {\n            background-color: #f44336;\n            color : white;\n        }\n        .lista-participantes {\n            list-style : none;\n             }\n        .controles {\n            margin-right: 5px;\n        }\n        .pregunta-respuesta {\n            height: 230px;\n        }\n        .lime {\n            background-color: #b71c1c;\n            margin-bottom : 30px;\n            color: white;\n        }\n        .participante{\n            color: #3d5afe;\n        }\n        "]
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [preguntas_service_1.PreguntasService, participante_service_1.ParticipanteService])
     ], JuegoComponent);
     return JuegoComponent;
 }());

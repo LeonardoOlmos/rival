@@ -10,17 +10,22 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
+var http_1 = require('@angular/http');
 var app_component_1 = require('./app.component');
 var juego_component_1 = require('./juego/juego.component');
 var cronometro_component_1 = require('./cronometro/cronometro.component');
+var medidor_component_1 = require('./medidor/medidor.component');
+var participante_service_1 = require('./services/participante.service');
+var preguntas_service_1 = require('./services/preguntas.service');
 var ng_bootstrap_1 = require('@ng-bootstrap/ng-bootstrap');
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule, ng_bootstrap_1.NgbModule.forRoot()],
-            declarations: [app_component_1.AppComponent, juego_component_1.JuegoComponent, cronometro_component_1.CronometroComponent],
+            imports: [platform_browser_1.BrowserModule, http_1.HttpModule, ng_bootstrap_1.NgbModule.forRoot()],
+            declarations: [app_component_1.AppComponent, juego_component_1.JuegoComponent, cronometro_component_1.CronometroComponent, medidor_component_1.MedidorComponent],
+            providers: [participante_service_1.ParticipanteService, preguntas_service_1.PreguntasService],
             bootstrap: [app_component_1.AppComponent]
         }), 
         __metadata('design:paramtypes', [])

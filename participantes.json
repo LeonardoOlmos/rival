@@ -1,8 +1,8 @@
 {
     "Participantes":[
-        {"participante" : "Diana"},
-        {"participante" : "Oswaldo"},
-        {"participante" : "Mauricio"},
-        {"participante" : "Julio"}
+        {"participante" : "Diana", "puntuacion_ronda": 0, "puntuacion_total":0},
+        {"participante" : "Julio",  "puntuacion_ronda": 0, "puntuacion_total":0},
+        {"participante" : "Mauricio", "puntuacion_ronda": 0, "puntuacion_total":0},
+        {"participante" : "Oswaldo", "puntuacion_ronda": 0, "puntuacion_total":0}
  ]
 }

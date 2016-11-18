@@ -1,5 +1,5 @@
 {
-    "Ronda 1":[
+    "1":[
         {"pregunta" : "¿Quién es el primer ministro de Perú?", "respuesta" : "Fernando Zavala."},
         {"pregunta" : "Menciona los derechos de los deudores tributarios", "respuesta": "Interponer cualquier medio impugnatorio establecido en el Código Tributario."},
         {"pregunta" : "¿Cuándo se puede interponer reclamación?", "respuesta" : "Cuando los deudores tributarios están directamente afectados."},
@@ -11,15 +11,15 @@
         {"pregunta" : "De no interponerse las reclamaciones contra las resoluciones y contra los actos vinculados con la determinación de la deuda dentro del plazo de 20 días ¿Qué sucede? ", "respuesta" : "Dichas resoluciones y actos quedarán firmes."},
         {"pregunta" : "¿Qué autoridad resuelve la reclamación en primera instancia?", "respuesta" : "SUNAT respecto de los tributos que administre. 2. Los Gobiernos locales 3. Otros que la ley señale."},
         {"pregunta" : "Nombre del año 2016 en Perú", "respuesta" : "Año de la consolidación del Mar de Grau."},
-        {"pregunta" : "Medios probatorios que pueden actuarse.", "respuesta" : "Documentos, pericia, y la inspección del órgano encargado de resolver."},
-        {"pregunta" : "Plazo para ofrecer las pruebas ", "respuesta" : "30 días hábiles, contados a partir de la fecha en que se interpone el recurso de reclamación o apelación."},
+        {"pregunta" : "Medios probatorios que pueden actuarse en la reclamación.", "respuesta" : "Documentos, pericia, y la inspección del órgano encargado de resolver."},
+        {"pregunta" : "Plazo para ofrecer las pruebas en la reclmación", "respuesta" : "30 días hábiles, contados a partir de la fecha en que se interpone el recurso de reclamación o apelación."},
         {"pregunta" : "¿Qué va a expresar la resolución de la Reclamación?", "respuesta" : "Los fundamentos de hecho y de derecho que sirvan de base para la resolución."},
         {"pregunta" : "¿Cuándo causan efecto las notificaciones?", "respuesta" : "Desde el día hábil siguiente al de su recepción o de la última publicación."},
         {"pregunta" : "¿Hasta qué momento se pueden modificar o revocar los actos de la Administración Tributaria?", "respuesta" : "Hasta antes de la notificación."},
-        {"pregunta" : "¿Qué significa GLP?", "respuesta" : "Gas Licuado de Petróleo, utilizada en todas las cocinas de Perú."},
+        {"pregunta" : "¿Qué significa GLP?", "respuesta" : "Gas Licuado de Petróleo."},
         {"pregunta" : "¿Qué actos puede hacer la Administración Tributaria después de la notificación?", "respuesta" : "Podrá revocar, modificar, sustituir o complementar sus actos, pero sólo en casos específicos."}
        ],
-        "Ronda 2" : [
+        "2" : [
         {"pregunta" : "¿En qué tiempo, la Administración Tributaria, resolverá las Reclamaciones?", "respuesta" : "Resolverá las reclamaciones dentro de un plazo máximo de 9 meses."},
         {"pregunta" : "Peruano precursor de los viajes espaciales.", "respuesta" : "Pedro Paulet, inventó un motor-cohete de combustible líquido (motor que después usarían las naves espaciales)."},
         {"pregunta" : "La Administración Tributaria podrá resolver las reclamaciones que sean declaradas fundadas o de cuestiones de puro derecho antes del vencimiento del plazo probatorio. Cierto o falso", "respuesta" : "Cierto."}, 
@@ -37,7 +37,7 @@
         {"pregunta" : "Aviador Peruano considerado héroe de la primera guerra mundial.", "respuesta" : "Juan Bielovucic, luchó con Francia."},
         {"pregunta" : "Departamento más poblado?", "respuesta" : "Lima."}
     ],
-        "Ronda 3": [
+        "3": [
         {"pregunta" : "¿Quién notificará para que se subsanen las omisiones que pudieran existir para el trámite de la apelación?", "respuesta" : "La Administración Tributaria."},
         {"pregunta" : "¿Ciudad más Alta del Mundo?", "respuesta" : "Arrinconada."},
         {"pregunta" : "Territorio de Perú.", "respuesta" : "1285,215.6 km"},
@@ -52,7 +52,7 @@
         {"pregunta" : "Cargo que ocupo Simón Bolívar en Perú", "respuesta" : "Presidente."}  
         ],      
 
-        "Ronda 4": [
+        "4": [
         {"pregunta" : "¿Qué podrá agraviarse en el recurso de apelación?", "respuesta" : "Podrá discutir en la apelación aspectos que no se impugnaron en la reclamación."},
         {"pregunta" : "¿Cuáles son los Poderes en Perú?", "respuesta" : "Ejecutivo Legislativo y Judicial."},
         {"pregunta" : "Con quien delimito Perú su territorio a partir de un fallo de la Corte Internacional de Justicia.", "respuesta" : "Chile."},
@@ -65,13 +65,13 @@
         {"pregunta" : "¿Es necesario la interposición de la reclamación para la apelación de puro derecho?", "respuesta" : "No."}
       ],
 
-      "Ronda 5": [
-        {"pregunta" : "¿Cuál es procedimiento para que el Tribunal conozca de esta apelación?", "respuesta" : "El Tribunal, previamente deberá calificar la impugnación como de puro derecho."},
+      "5": [
+        {"pregunta" : "¿La queja es un recurso administrativo?", "respuesta" : "No, es un medio procesal."},
         {"pregunta" : "¿Procede recurso alguno contra la resolución del Tribunal Fiscal?", "respuesta" : "Contra lo resuelto por el Tribunal Fiscal no cabe recurso alguno en la vía administrativa."},
         {"pregunta" : "¿Contra que procede la queja?", "respuesta" : "Contra actuaciones o procedimientos que afecten directamente o infrinjan lo establecido en este Código Tributario del Perú, la Ley General de Aduanas, así como su Reglamento y disposiciones administrativas en materia aduanera."},
         {"pregunta" : "¿Cuál es termino para la interposición de la queja?", "respuesta" : "20 días."},
         {"pregunta" : "¿Quién es competente para resolver de la queja?", "respuesta" : "Tribunal Fiscal y el Ministro de economía y Finanzas contra actos del Tribunal Fiscal."},
-        {"pregunta" : "¿La queja es un recurso administrativo?", "respuesta" : "No, es un medio procesal."}
+        {"pregunta" : "¿Cuál es procedimiento para que el Tribunal conozca de esta apelación?", "respuesta" : "El Tribunal, previamente deberá calificar la impugnación como de puro derecho."}
       ]
 }
 

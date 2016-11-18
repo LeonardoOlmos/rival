@@ -27,13 +27,6 @@ var CronometroComponent = (function () {
             this.minutos_original = this.minutos;
             this.minutos = cambios.minutos.currentValue;
         }
-        /*    if (cambios.nuevaRonda) {
-                if (cambios.nuevaRonda.currentValue) {
-                    this.iniciar();
-                } else {
-                    this.nuevaRonda = false;
-                }
-            }*/
     };
     CronometroComponent.prototype.iniciar = function () {
         var _this = this;
@@ -77,6 +70,10 @@ var CronometroComponent = (function () {
         __metadata('design:type', Boolean)
     ], CronometroComponent.prototype, "nuevaRonda", void 0);
     __decorate([
+        core_1.Input(), 
+        __metadata('design:type', Number)
+    ], CronometroComponent.prototype, "rondaActual", void 0);
+    __decorate([
         core_1.Output(), 
         __metadata('design:type', Object)
     ], CronometroComponent.prototype, "accion", void 0);
@@ -88,8 +85,8 @@ var CronometroComponent = (function () {
         core_1.Component({
             moduleId: 'module.id',
             selector: 'b-cronometro',
-            template: "\n        <div class=\"container\">\n            <div *ngIf=\"minutos != 0 || segundos != 0\">\n                <h1>{{minutos}} : {{ segundos }} </h1>\n            </div>\n            <div class=\"tiempo\" *ngIf=\"minutos == 0 && segundos == 0\">\n                <h1> TIEMPO!</h1>\n            </div>\n            <button class=\"btn btn-primary btn-lg\" (click)=\"iniciar()\"> Iniciar </button>\n            <button class=\"btn btn-warning btn-lg\" (click)=\"reiniciar()\"> Reiniciar </button>\n            <button class=\"btn btn-danger btn-lg\" (click)=\"detener()\"> Detener </button>\n        </div>\n            ",
-            styles: ["\n    h1 {\n        font-size: 10rem;\n        font-family: 'Roboto';\n        color : crimson;\n    }\n\n    .tiempo > h1 {\n        color: yellowgreen;\n    }\n"]
+            template: "\n    <div class=\"col-md-6\">\n            <div *ngIf=\"minutos != 0 || segundos != 0\">\n                <h1>{{minutos}} : {{ segundos }} </h1>\n            </div>\n            <div class=\"tiempo\" *ngIf=\"minutos == 0 && segundos == 0\">\n                <h1 *ngIf=\"rondaActual!=5\"> TIEMPO!</h1>\n                <h2 *ngIf=\"rondaActual==5\">Muerte S\u00FAbita</h2>\n            </div>\n    </div>\n    <div class=\"col-md-4\" *ngIf=\"minutos != 0 || segundos != 0\" >\n            <button class=\"btn btn-outline-primary btn-lg controles\" (click)=\"iniciar()\"> Iniciar </button>\n            <button class=\"btn btn-outline-warning btn-lg controles\" (click)=\"reiniciar()\"> Reiniciar </button>\n            <button class=\"btn btn-outline-danger btn-lg controles\" (click)=\"detener()\"> Detener </button>\n    </div>\n            ",
+            styles: ["\n    h1 {\n        font-size: 9.8rem;\n        font-family: 'Roboto';\n        color : crimson;\n    }\n    h2 {\n        font-size: 5.8rem;\n        font-family: 'Roboto';\n    }\n\n    .tiempo > h1,h2 {\n        color: #2962ff;\n    }\n    .controles {\n        width: 130px;\n        margin-bottom : 5px;\n    }\n"]
         }), 
         __metadata('design:paramtypes', [])
     ], CronometroComponent);

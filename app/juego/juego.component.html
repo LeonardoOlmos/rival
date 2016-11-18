@@ -1,13 +1,72 @@
-    <div class="container">
-        <h1 *ngIf="rondaActual ==0 "> Nuevo Juego </h1>
+
+        <nav class="navbar navbar-light bg-faded lime">
+            <div class="container-fluid">
+                <div class="col-md-9">
+         <h1 *ngIf="rondaActual ==0 "> El fiscal más débil</h1>
         <h1 *ngIf="rondaActual !=0 ">Ronda {{rondaActual}} </h1>
-        <div class="row">
-        <b-cronometro *ngIf="nuevaRonda" (accion)="controlador($event)" (cero)="intermedio($event)" [minutos]="minutos" [segundos]="segundos" [nuevaRonda]="nuevaRonda" ></b-cronometro>
-        </div>
-        <div class="row" *ngIf="!juegoEnProceso">
-            <div class="col-md-4 offset-md-5">
-                <button class="btn btn-lg next" (click)="siguienteRonda()" *ngIf="rondaActual==0"> Empezar Juego</button>
-                <button class="btn-lg next" (click)="siguienteRonda()" *ngIf="rondaActual!=0 && !nuevaRonda"> Siguiente Ronda</button>
+                </div>
+                <div class="col-md-3">
+                    <button *ngIf="rondaActual!=0 && nuevaRonda" class="btn btn-outline-secondary" (click)="reiniciaRonda()">Reiniciar Ronda</button >
+                </div>
             </div>
+        </nav>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                    <b-cronometro *ngIf="nuevaRonda" (accion)="controlador($event)" (cero)="intermedio($event)" [minutos]="minutos" [segundos]="segundos" [nuevaRonda]="nuevaRonda" [rondaActual]="rondaActual" ></b-cronometro>
+                    <div class="row" *ngIf="!juegoEnProceso">
+                        <div class="inicio" *ngIf="rondaActual==0">
+                           <div class="participante">
+                            <h2>Participantes</h2>
+                           </div>
+                            <ul>
+                            <li class="lista-participantes" *ngFor="let p of participantes ">
+                                <h3>{{p.participante}}</h3>
+                            </li>
+                            </ul>
+
+                        </div>
+                        <div class="col-md-6 offset-md-5">
+                            <div class="" *ngIf="rondaActual!=0 && !nuevaRonda">
+                            <h2>Resultados</h2>
+                             <li class="lista-participantes" *ngFor="let p of participantes; let i=index; ">
+                                <h3>{{p.participante}} : {{p.puntuacion_ronda}}
+                                     <button class="btn-outline-danger" (click)="adios(i)" *ngIf="rondaActual>1" >Adiós!</button></h3>
+                            </li> 
+                            <h2>Acumulado Ronda : <small>$ {{acumuladoRonda}}</small></h2>
+                             <h2>Acumulado Total : <small>$ {{acumuladoTotal}}</small></h2>
+                            </div>
+                            <button class="btn btn-lg next" (click)="siguienteRonda()" *ngIf="rondaActual==0"> Empezar Juego</button>
+                            <button class="btn-lg next" (click)="siguienteRonda()" *ngIf="rondaActual!=0 && !nuevaRonda"> Siguiente Ronda</button>
+                        </div>
+                    </div>
+
+                    <div class="row enProceso" *ngIf="nuevaRonda">
+                        <div class="col-md-8">
+                            <div class="pregunta-respuesta">
+                                <div class="row">
+                                    <h4>Participante: <small>{{participantes[participanteActual].participante}}</small></h4>
+                                </div>
+                                <div class="row">
+                                    <h3> {{preguntas[preguntaActual]?.pregunta}}</h3>
+                                    <h4> R: <small>{{preguntas[preguntaActual]?.respuesta}}</small></h4>
+                                </div>
+                            </div>
+                            <div class="row" *ngIf="juegoEnProceso || rondaActual==5">
+                                <button class="btn btn-success btn-lg controles" (click)="banco()">Banco</button>
+                                <button class="btn btn-info btn-lg controles" (click)="correcto()">Correcto</button>
+                                <button class="btn btn-danger btn-lg controles" (click)="incorrecto()">Incorrecto</button>
+                            </div>
+
+                            <div class="row">
+                                <h3>BANCO: {{acumuladoRonda}} </h3>
+                        </div>
+                    </div>
+                </div>
+                            </div>
+                <div class="col-md-3" *ngIf="nuevaRonda">
+                    <b-medidor [ganado]="ganado"></b-medidor>
+
+                </div>
+
         </div>
-    </div>
